@@ -1,0 +1,240 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: rgb(228, 228, 228);
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/************************* Header y Nav. bar ************************/
+
+.home {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    min-height: 125px;
+    padding: 0px 50px;
+    border-bottom: 3px solid lightgray;
+}
+
+#bg {
+    background-image: url(../resources/home_bg.jpg);
+    background-color: white;
+    min-height: 500px; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icon-img {
+    height: 300px;
+    width: 300px;
+    border-radius: 500px;
+    border: 3px solid white;
+    margin: 25px;
+}
+.icon a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+
+}
+
+nav a{
+    margin: 0px 15px;
+    font-weight: 900;
+    font-size: 25px;
+    border: 3px solid;
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+}
+
+nav a:hover{
+    color:rgb(235, 102, 40);
+    transition: color 0.25s;
+}
+/*****************************************************************/
+
+/***************************** Main ******************************/
+main {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 0px;
+    padding: 5px;
+}
+
+.in-flex{
+    flex: 3;
+    padding: 25px;
+    background-color: rgb(253, 255, 252);
+    margin: 20px;
+    border: 3px solid;
+    border-color: lightgrey;
+}
+
+.in-flex:first-child {
+    flex: 1;
+    padding: 25px;
+    margin: 20px;
+    background-color: rgb(253, 255, 252);
+}
+/*****************************************************************/
+
+/*************************** Aside ****************************/
+.aside-info {
+    display: flex;
+    background-color: rgb(65, 67, 84);
+    margin-bottom: 25px;
+    padding: 10px 0px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    border: 3px solid lightgrey;
+    cursor: pointer;
+}
+
+.aside-info h2 {
+    text-align: center;
+    margin: 10px 0px;
+    color: white;
+    background-color: inherit;
+    border: 0px;
+    font-size: 1.5em;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+}
+
+.aside-info div {
+    width:100%;
+    background-color: whitesmoke;
+    margin-bottom: 25px;
+    padding: 10px 0px;
+    display: none;
+}
+
+.padding {
+    padding: 5px;
+}
+
+/*****************************************************************/
+
+/**************************** Article ****************************/
+.art-info {
+    background-color: rgb(255, 159, 28);
+    margin-bottom: 25px;
+    padding: 10px 0px;
+    border-radius: 10px;
+    border: 3px solid lightgrey;
+}
+
+.art-info h2 {
+    margin:15px 0px ;
+    color: white;
+    text-align: center;
+}
+
+.art-info p {
+    padding: 10px 0px 20px 0px;
+    margin: 25px 0px
+}
+
+.art-info div {
+    background-color: whitesmoke;
+    margin: 25px 0px
+}
+
+.container {
+    padding: 15px;
+}
+/*****************************************************************/
+
+/**************************** Footer *****************************/
+footer {
+    display:flex;
+    background-color:rgb(1, 22, 39);
+    margin-top:100px ;
+    padding: 50px;
+    color: white;
+    flex-direction: column;
+    border-top: 3px solid;
+    border-color: lightgrey;
+}
+
+footer h2 {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+
+.contact {
+    display: flex;
+    align-items:flex-start;
+    justify-content: space-between;
+}
+
+.contact_icon {
+    display: flex;
+    align-items: center;
+}
+
+.contact_icon img {
+    height: fit-content;
+    width: 25px;
+    padding: 10px;
+}
+
+/******************* Animations **********************/
+
+@keyframes home-load {
+    0% {
+        transform:scale(0%);
+    }
+
+    100% {
+        transform:scale(100%);
+    }
+}
+
+.icon, nav {
+    animation: home-load 2000ms ease-in-out;
+}
+
+@keyframes info-load {
+    0% {
+        transform: translateY(0%);
+    }
+
+    100% {
+        transform: translateY(100%);
+    }
+}
+
+.info-animation {
+    animation: info-load 2000s ease-in-out;
+}
