@@ -224,17 +224,3 @@ footer h2 {
 .icon, nav {
     animation: home-load 2000ms ease-in-out;
 }
-
-@keyframes info-load {
-    0% {
-        transform: translateY(0%);
-    }
-
-    100% {
-        transform: translateY(100%);
-    }
-}
-
-.info-animation {
-    animation: info-load 2000s ease-in-out;
-}
